@@ -1,0 +1,27 @@
+[0m14:53:51.681470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0697E1900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06BAFB130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06BAFB370>]}
+
+
+============================== 14:53:51.691500 | f790dafc-5897-4bbc-ab61-0c7c58ce1d8d ==============================
+[0m14:53:51.691500 [info ] [MainThread]: Running with dbt=1.5.0
+[0m14:53:51.691500 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\rl627\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m14:59:45.587224 [debug] [MainThread]: Starter project path: c:\Users\rl627\Desktop\Git\duckdb-dbt-template\.venv\lib\site-packages\dbt\include\starter_project
+[0m15:00:06.628629 [info ] [MainThread]: No sample profile found for duckdb.
+[0m15:00:06.629659 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:00:06.633629 [debug] [MainThread]: Command `dbt init` succeeded at 15:00:06.633629 after 374.96 seconds
+[0m15:00:06.634629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0697E1900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06BB3C310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06BAFB460>]}
+[0m15:00:06.634629 [debug] [MainThread]: Flushing usage events
