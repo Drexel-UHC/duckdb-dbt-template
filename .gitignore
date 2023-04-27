@@ -3,3 +3,7 @@ target/
 dbt_packages/
 logs/
 .Rproj.user
+hello/profiles.yml
+hello/.user.yml
+*.duckdb
+*.duckdb
