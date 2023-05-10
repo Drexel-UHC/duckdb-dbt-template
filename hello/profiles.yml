@@ -1,0 +1,11 @@
+hello:
+  outputs:
+    dev:
+      type: duckdb
+      path: jaffle_shop.duckdb
+      schema: parquet
+      extensions:
+        - httpfs
+        - parquet
+      external_root: 'workspaces\duckdb-dbt-template\hello\external-dev\'
+  target: dev
