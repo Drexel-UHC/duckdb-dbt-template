@@ -1,6 +1,6 @@
 hello:
   outputs:
-    dev:
+    dev-virtual:
       type: duckdb
       path: jaffle_shop.duckdb
       schema: parquet
@@ -8,4 +8,12 @@ hello:
         - httpfs
         - parquet
       external_root: 'workspaces\duckdb-dbt-template\hello\external-dev\'
-  target: dev
+    dev-local-ran:
+      type: duckdb
+      path: jaffle_shop.duckdb
+      schema: parquet
+      extensions:
+        - httpfs
+        - parquet
+      external_root: 'C:\Users\rl627\Desktop\Git\duckdb-dbt-template\hello\external-dev\'
+  target: dev-local-ran
