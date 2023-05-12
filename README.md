@@ -1,5 +1,10 @@
 Welcome to your new dbt project!
-
+ 
+### Setup
+ 
+**To setup follow [set up instructions here](https://drexel-uhc.github.io/analytics-corner/pages/manuals/dbt/get-started-install.html#clone-template-repository-duckdb-dbt-template)**
+ 
+ 
 ### Using the starter project
 
 Try running the following commands:
