@@ -1,9 +1,9 @@
-**/venv/
+/venv/
+*.duckdb
 target/
 dbt_packages/
 logs/
-.Rproj.user
+.user.yml
 
-hello/.user.yml
-*.duckdb
-*.duckdb
+
+
