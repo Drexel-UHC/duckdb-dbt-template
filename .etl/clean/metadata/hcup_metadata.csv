@@ -1,5 +1,6 @@
 "Variable","Description","Type","Values"
 "year","The year of the hospital stay","Numeric","2010, 2015"
+"zcta","Five digit ZCTA code","Numeric","Five digit codes"
 "state","The state where the hospital stay occurred","Categorical","NY, PA"
 "patient_id","Unique identifier for each patient","Numeric","Range from 1 to the number of simulated patients"
 "age","Age of the patient","Numeric","Simulated based on normal distribution (Mean = 50, SD = 18)"

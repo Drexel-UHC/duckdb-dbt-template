@@ -10,10 +10,13 @@
     year = template_row$year
     dataset = template_row$dataset
     
+    xwalk_tmp = xwalk_spatial %>% filter(state == template_row$state)
+    
     data <- data.frame(
       Year = rep(year, n),
       State = rep(state, n),
       Patient_ID = seq(1:n),
+      zcta = sample(xwalk_spatial$zcta, size = n, replace = TRUE),
       Age = round(rnorm(n, mean=50, sd=18)),
       Gender = sample(c("Male", "Female"), n, replace = TRUE),
       Length_of_Stay = round(rnorm(n, mean=4, sd=2)),
@@ -56,6 +59,7 @@
   codebook <- tribble(
     ~Variable, ~Description, ~Type, ~Values,
     "year", "The year of the hospital stay", "Numeric", "2010, 2015",
+    "zcta", "Five digit ZCTA code", 'Numeric','Five digit codes',
     "state", "The state where the hospital stay occurred", "Categorical", "NY, PA",
     "patient_id", "Unique identifier for each patient", "Numeric", "Range from 1 to the number of simulated patients",
     "age", "Age of the patient", "Numeric", "Simulated based on normal distribution (Mean = 50, SD = 18)",
