@@ -16,7 +16,7 @@
       Year = rep(year, n),
       State = rep(state, n),
       Patient_ID = seq(1:n),
-      zcta = sample(xwalk_spatial$zcta, size = n, replace = TRUE),
+      zcta = sample(xwalk_tmp$zcta, size = n, replace = TRUE),
       Age = round(rnorm(n, mean=50, sd=18)),
       Gender = sample(c("Male", "Female"), n, replace = TRUE),
       Length_of_Stay = round(rnorm(n, mean=4, sd=2)),

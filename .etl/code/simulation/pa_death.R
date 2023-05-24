@@ -7,11 +7,13 @@
     state = template_row$state
     year = template_row$year
     dataset = template_row$dataset
+    xwalk_tmp = xwalk_spatial %>% filter(state == template_row$state)
     
     data <- data.frame(
       Year_of_Death = rep(year, n),
       State = rep(state, n),
       Record_ID = seq(1:n),
+      zcta = sample(xwalk_tmp$zcta, size = n, replace = TRUE),
       Age_at_Death = round(rnorm(n, mean=75, sd=10)),
       Gender = sample(c("Male", "Female"), n, replace = TRUE),
       Cause_of_Death = sample(paste("I", sprintf("%02d",0:99), sep = ""), n, replace = TRUE),
@@ -54,6 +56,7 @@
     ~Variable, ~Description, ~Type, ~Values,
     "Year_of_Death", "The year when the death occurred", "Numeric", "As specified in template row (e.g., 2010, 2015)",
     "State", "The state where the person was living at the time of death", "Categorical", "As specified in template row (e.g., 'PA')",
+    "zcta", "Five digit ZCTA code", 'Numeric','Five digit codes',
     "Record_ID", "Unique identifier for each record", "Numeric", "Range from 1 to the number of simulated records",
     "Age_at_Death", "Age of the person at the time of death", "Numeric", "Simulated based on normal distribution (Mean = 75, SD = 10)",
     "Gender", "Gender of the person", "Categorical", "Male, Female",
