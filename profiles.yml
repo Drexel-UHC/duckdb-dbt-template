@@ -1,19 +1,35 @@
 hello:
   outputs:
-    dev-virtual:
+    dev-local:
       type: duckdb
-      path: jaffle_shop.duckdb
+      path: dev.duckdb
       schema: parquet
       extensions:
         - httpfs
         - parquet
-      external_root: 'workspaces\duckdb-dbt-template\hello\external-dev\'
-    dev-local-ran:
+      external_root: '.\external-dev\models\'
+    dev-server-my_name:
       type: duckdb
-      path: jaffle_shop.duckdb
+      path: dev.duckdb
       schema: parquet
       extensions:
         - httpfs
         - parquet
-      external_root: 'C:\Users\rl627\Desktop\Git\duckdb-dbt-template\hello\external-dev\'
-  target: dev-local-ran
+      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\my_name\'
+    stage:
+      type: duckdb
+      path: dev.duckdb
+      schema: parquet
+      extensions:
+        - httpfs
+        - parquet
+      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\_stage\'
+    prod:
+      type: duckdb
+      path: dev.duckdb
+      schema: parquet
+      extensions:
+        - httpfs
+        - parquet
+      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\_stage\'  
+  target: dev-local
