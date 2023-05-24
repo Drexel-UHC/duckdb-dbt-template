@@ -4,32 +4,5 @@ hello:
       type: duckdb
       path: dev.duckdb
       schema: parquet
-      extensions:
-        - httpfs
-        - parquet
       external_root: '.\external-dev\models\'
-    dev-server-my_name:
-      type: duckdb
-      path: dev.duckdb
-      schema: parquet
-      extensions:
-        - httpfs
-        - parquet
-      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\my_name\'
-    stage:
-      type: duckdb
-      path: dev.duckdb
-      schema: parquet
-      extensions:
-        - httpfs
-        - parquet
-      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\_stage\'
-    prod:
-      type: duckdb
-      path: dev.duckdb
-      schema: parquet
-      extensions:
-        - httpfs
-        - parquet
-      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\_stage\'  
   target: dev-local
