@@ -1,0 +1,11 @@
+version: 2
+sources:
+- name: NETS
+  tags:
+  - Businesses
+  description: 'Simulated in bussinesses  data.'
+  meta:
+    external_location: .\external-dev\sources\{name}.csv
+  tables:
+  - name: NETS
+    description: 'This is a crossection business dataset.'

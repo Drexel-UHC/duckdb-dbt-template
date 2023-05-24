@@ -1,0 +1,11 @@
+version: 2
+sources:
+- name: HCUP
+  tags:
+  - In-patient
+  description: 'Simulated in patient hospitaliation data.'
+  meta:
+    external_location: .\external-dev\sources\{name}.csv
+  tables:
+  - name: HCUP_SID_NY_2010
+    description: 'This is NY 2010 file.'

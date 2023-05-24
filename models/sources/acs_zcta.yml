@@ -1,0 +1,14 @@
+version: 2
+sources:
+- name: ACS
+  tags:
+  - ACS
+  - Census
+  - ZCTA-level
+  - Exposures
+  description: 'American Community Survey data'
+  meta:
+    external_location: .\external-dev\sources\{name}.csv
+  tables:
+  - name: acs_zcta
+    description: 'A simulated dataset based on the American Community Survey (ACS) indicators.'

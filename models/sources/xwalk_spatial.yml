@@ -1,0 +1,11 @@
+version: 2
+sources:
+- name: Crosswalks
+  tags:
+  - Businesses
+  description: 'Spatial relationship and boundary files.'
+  meta:
+    external_location: .\external-dev\sources\{name}.csv
+  tables:
+  - name: xwalk_spatial
+    description: 'This is asimualted reliationship file ebtween zcta, county and city for two fictional states.'
