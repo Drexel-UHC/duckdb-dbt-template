@@ -9,9 +9,7 @@ generate_spatial_data <- function(state, n = 1000) {
     ZCTA = sample(sprintf("%05d",1:99999), n, replace = TRUE),
     County_Code = sample(sprintf("%03d",1:999), n, replace = TRUE),
     City_Name = sample(c("Everwood Springs", "Silverstone Ridge", "Coppermill Valley", "Liberty Meadows", 
-                         "Fox Hollow", "Iron Gate", "Redcliff Hills", "Stony Creek", "Pinebrook Heights", 
-                         "Lakeview Haven", "Willow Glen", "Oakdale Village", "Diamond Peak", 
-                         "Sunrise Bluff", "Shadowbrook"), n, replace = TRUE)
+                         "Fox Hollow", NA, NA, NA, NA, NA), n, replace = TRUE)
   )
  
   final =  data %>% 
