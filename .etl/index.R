@@ -1,6 +1,6 @@
 { # Setup -------------------------------------------------------------------
 
-  ## Load necessary libraries
+  ## Dependencies
   library(dplyr)
   library(tidyr)
   library(purrr)
@@ -8,5 +8,16 @@
   library(arrow)
   library(cli)
   library(janitor)
+  library(stringr)
 
 }
+
+
+{ # Simulate data -----------------------------------------------------------
+
+  
+  "code/simulation/hcup.R"
+  
+}
+
+
