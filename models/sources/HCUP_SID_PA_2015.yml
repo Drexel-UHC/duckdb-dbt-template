@@ -5,7 +5,7 @@ sources:
   - In-patient
   description: 'Simulated in patient hospitaliation data.'
   meta:
-    external_location: .\external-dev\sources\{name}.csv
+    external_location: .\external-dev\sources\{name}.parquet
   tables:
   - name: HCUP_SID_PA_2015
     description: 'This is PA 2015 file.'
