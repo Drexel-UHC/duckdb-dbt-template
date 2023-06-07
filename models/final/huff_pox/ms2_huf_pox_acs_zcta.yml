@@ -1,0 +1,28 @@
+version: 2
+models:
+- name: ms2_huf_pox_acs_zcta
+  description:   'Merging of all years of hosptialization data with demographic data'
+  config:
+    tags:
+    - Hospitalization
+    - Mortality
+    - dbt_final
+  columns:
+  - name: ZCTA
+    type: VARCHAR
+  - name: STATE
+    type: VARCHAR
+  - name: YEAR
+    type: int32
+  - name: PCT_NBBLACK
+    type: float
+  - name: INCOME
+    type: flaot
+  - name: POVERTY_RATE
+    type: float
+  - name: POPULATION
+    type: int32
+  - name: N_HUF_POX_HOSP
+    type: int32
+  - name: N_HUF_POX_DEATH
+    type: int32

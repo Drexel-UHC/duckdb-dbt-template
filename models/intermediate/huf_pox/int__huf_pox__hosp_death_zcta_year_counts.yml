@@ -1,0 +1,20 @@
+version: 2
+models:
+- name: int__huf_pox__hosp_death_zcta_year_counts
+  description:   'Merging of all years of hosptialization data with demographic data'
+  config:
+    tags:
+    - Hospitalization
+    - Mortality
+    - dbt_final
+  columns:
+  - name: ZCTA
+    type: VARCHAR
+  - name: STATE
+    type: VARCHAR
+  - name: YEAR
+    type: int32
+  - name: N_HUF_POX_HOSP
+    type: int32
+  - name: N_HUF_POX_DEATH
+    type: int32
