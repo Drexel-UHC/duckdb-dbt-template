@@ -1,0 +1,27 @@
+version: 2
+models:
+- name: int__huf_pox__mortality
+  description:   'Recoding of our compiled mortality records; generates a flag for huffle pox.'
+  config:
+    tags:
+    - Mortality
+    - dbt_int
+- name: int__huf_pox__hosp
+  description:   'Recoding of our compiled hospitalization records; generates a flag for huffle pox.'
+  config:
+    tags:
+    - Mortality
+    - dbt_int
+- name: int__huf_pox__death_zcta_count
+  description:   'Count of huffle pox deaths for all years states by ZCTA'
+  config:
+    tags:
+    - Mortality
+    - dbt_int
+- name: int__huf_pox__hosp_zcta_count
+  description:   'Count of huffle pox hospitalizations for all years states by ZCTA'
+  config:
+    tags:
+    - Hospitalization
+    - dbt_int
+

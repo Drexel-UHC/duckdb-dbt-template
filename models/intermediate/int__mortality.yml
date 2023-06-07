@@ -1,0 +1,8 @@
+version: 2
+models:
+- name: int__mortality
+  description:   'Merging of all years of Mortality data'
+  config:
+    tags:
+    - Hospitalization
+    - dbt_int

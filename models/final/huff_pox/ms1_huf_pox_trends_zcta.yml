@@ -1,0 +1,9 @@
+version: 2
+models:
+- name: ms1_huf_pox_trends_zcta
+  description:   'Merging of all years of hosptialization data'
+  config:
+    tags:
+    - Hospitalization
+    - Mortality
+    - dbt_final
