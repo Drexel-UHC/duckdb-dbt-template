@@ -44,7 +44,7 @@
   states <- c("PA", "NY")
   years <- c(2010, 2015)
   template = crossing(state = states, year = years) %>% 
-    mutate(dataset = glue("HCUP_SID_{state}_{year}"))
+    mutate(dataset = glue("HOSPITALIZATION_{state}_{year}"))
   
   # simualte
   sim_data = template %>% 
@@ -70,7 +70,7 @@
   )
   
   # Write the codebook to a csv file
-  write.csv(codebook,  glue("clean/metadata/hcup_metadata.csv"), row.names = FALSE)
+  write.csv(codebook,  glue("clean/metadata/hospitalization_metadata.csv"), row.names = FALSE)
   
 }
 
@@ -81,6 +81,8 @@
          dataset_id = unique(data$dataset)
          data %>% arrow::write_csv_arrow(sink = glue("clean/csv/{dataset_id}.csv"))
          data %>% arrow::write_parquet(sink = glue("clean/parquet/{dataset_id}.parquet"))
+         data %>% arrow::write_csv_arrow(sink = glue("../external-dev/sources/{dataset_id}.csv"))
+         data %>% arrow::write_parquet(sink = glue("../external-dev/sources/{dataset_id}.parquet"))
          cli_alert_success("Export simulated data: {dataset_id}")
          })
   
