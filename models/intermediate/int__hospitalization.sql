@@ -26,7 +26,6 @@ SELECT
   age, 
   gender,
   diagnosis_code AS dx_code, 
-  total_charges,
-  dataset
+  total_charges
 FROM cte_1
 
