@@ -3,6 +3,7 @@ sources:
 - name: NETS
   tags:
   - Businesses
+  - dbt_source
   description: 'Simulated in bussinesses  data.'
   meta:
     external_location: .\external-dev\sources\{name}.csv

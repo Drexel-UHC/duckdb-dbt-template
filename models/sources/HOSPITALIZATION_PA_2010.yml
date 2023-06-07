@@ -3,6 +3,7 @@ sources:
 - name: HCUP
   tags:
   - In-patient
+  - dbt_source
   description: 'Simulated in patient hospitaliation data.'
   meta:
     external_location: .\external-dev\sources\{name}.parquet

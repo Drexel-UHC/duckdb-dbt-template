@@ -3,6 +3,7 @@ sources:
 - name: Mortality
   tags:
   - Line-level mortality
+  - dbt_source
   description: 'Simulated line level moraltiy data '
   meta:
     external_location: .\external-dev\sources\{name}.csv
