@@ -18,6 +18,7 @@ SELECT
   record_id, 
   state,
   year_of_death as year,
+  zcta,
   zcta_of_death,
   zcta_of_residence,
   age_at_death, 
