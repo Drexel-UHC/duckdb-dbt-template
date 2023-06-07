@@ -1,3 +1,3 @@
 {{ config(materialized='external', format =  target.schema) }}
 SELECT *
-FROM {{ source('HCUP', 'HCUP_SID_NY_2010') }}
+FROM {{ source('HCUP', 'HOSPITALIZATION_NY_2010') }}

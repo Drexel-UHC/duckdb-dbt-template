@@ -7,5 +7,5 @@ sources:
   meta:
     external_location: .\external-dev\sources\{name}.parquet
   tables:
-  - name: HCUP_SID_NY_2015
-    description: 'This is NY 2015 file.'
+  - name: HOSPITALIZATION_PA_2010
+    description: 'This is PA 2010 file.'
