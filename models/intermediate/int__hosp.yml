@@ -1,0 +1,27 @@
+version: 2
+models:
+- name: int__hosp
+  description:   'Merging of all years of hosptialization data'
+  config:
+    tags:
+    - Hospitalization
+    - dbt_int
+  columns:
+  - name: PATIENT_ID
+    type: int32
+    description: '{{ doc("var_hosp__patient_id") }}'
+  - name: STATE
+    type: VARCHAR
+    description: '{{ doc("var__state") }}' 
+  - name: YEAR
+    type: int32
+    description: '{{ doc("var__year") }}' 
+  - name: GENDER
+    type: int32
+    description: '{{ doc("var__gender") }}' 
+  - name: DX_CODE
+    type: int32
+    description: '{{ doc("var__dx_code") }}' 
+  - name: TOTAL_CHARGES
+    type: int32
+    description: '{{ doc("var_hosp__total_charges") }}' 
