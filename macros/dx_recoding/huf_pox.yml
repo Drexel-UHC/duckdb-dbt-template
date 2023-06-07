@@ -1,0 +1,5 @@
+version: 2
+
+macros:
+  - name: dx_huff_pox
+    description: Output is a boolean indicator (True/False) flag for `huf_pox` dx codes. This macro will return True if `dx_code` contain a `huf_pox` dx code. Please see the macro code below for a list of these `huf_pox` dx codes.  
