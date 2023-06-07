@@ -9,6 +9,7 @@
     dataset = template_row$dataset
     xwalk_tmp = xwalk_spatial %>% filter(state == template_row$state)
     
+
     data <- data.frame(
       Year_of_Death = rep(year, n),
       State = rep(state, n),
@@ -16,7 +17,7 @@
       zcta = sample(xwalk_tmp$zcta, size = n, replace = TRUE),
       Age_at_Death = round(rnorm(n, mean=75, sd=10)),
       Gender = sample(c("Male", "Female"), n, replace = TRUE),
-      Cause_of_Death = sample(paste("I", sprintf("%02d",0:99), sep = ""), n, replace = TRUE),
+      Cause_of_Death = sample(c(paste("I", sprintf("%02d",0:99), sep = ""), huffpox_dx), n, replace = TRUE),
       ZCTA_of_Residence = sample(sprintf("%05d",1:99999), n, replace = TRUE),
       ZCTA_of_Death = sample(sprintf("%05d",1:99999), n, replace = TRUE),
       Dataset = rep(dataset, n)
@@ -81,7 +82,7 @@
 { # EDA ---------------------------------------------------------------------
 
   dfa = sim_data %>% bind_rows()
-  
+  dfa %>%  filter(cause_of_death%in%huffpox_dx)
   
   ## dx codes
   set.seed(123)

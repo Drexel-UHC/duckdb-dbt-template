@@ -13,6 +13,9 @@
   ## Imports
   source("R/export_dataset.R")
   xwalk_spatial = read_parquet("clean/spatial_relationships.parquet")
+  
+  ## Global Objects
+  huffpox_dx = c("D2463", "D2511")
 }
 
 

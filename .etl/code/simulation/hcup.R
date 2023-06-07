@@ -20,7 +20,7 @@
       Age = round(rnorm(n, mean=50, sd=18)),
       Gender = sample(c("Male", "Female"), n, replace = TRUE),
       Length_of_Stay = round(rnorm(n, mean=4, sd=2)),
-      Diagnosis_Code = sample(paste("D", sprintf("%04d",1:9999), sep = ""), n, replace = TRUE),
+      Diagnosis_Code = sample(c(paste("I", sprintf("%02d",0:99), sep = ""), huffpox_dx), n, replace = TRUE),
       Total_Charges = round(rnorm(n, mean=20000, sd=10000)),
       Dataset = rep(dataset, n)
     )
@@ -75,24 +75,13 @@
 }
 
 { # Export ------------------------------------------------------------------
-  
-  walk(sim_data,
-       function(data){
-         dataset_id = unique(data$dataset)
-         data %>% arrow::write_csv_arrow(sink = glue("clean/csv/{dataset_id}.csv"))
-         data %>% arrow::write_parquet(sink = glue("clean/parquet/{dataset_id}.parquet"))
-         data %>% arrow::write_csv_arrow(sink = glue("../external-dev/sources/{dataset_id}.csv"))
-         data %>% arrow::write_parquet(sink = glue("../external-dev/sources/{dataset_id}.parquet"))
-         cli_alert_success("Export simulated data: {dataset_id}")
-         })
-  
+  walk(sim_data, ~export_dataset(.x))
 }
-
 
 { # EDA ---------------------------------------------------------------------
 
   dfa = sim_data %>% bind_rows()
-  
+  dfa %>%  filter(diagnosis_code%in%huffpox_dx)
   
   ## dx codes
   set.seed(123)
