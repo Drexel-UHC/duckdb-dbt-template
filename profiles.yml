@@ -28,4 +28,4 @@ hello:
       blob_path: f
       endpoint_suffix: f
       sas_token: f
-  target: prod-v1.0
+  target: dev-local
