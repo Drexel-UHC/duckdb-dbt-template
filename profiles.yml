@@ -5,4 +5,27 @@ hello:
       path: dev.duckdb
       schema: parquet
       external_root: '.\external-dev\models\'
-  target: dev-local
+    dev-uhc-ran:
+      type: duckdb
+      path: dev.duckdb
+      schema: parquet
+      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\rl627\'  
+    stage-v1.0:
+      type: duckdb
+      path: dev.duckdb
+      schema: parquet
+      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\_v1.0\stage\'
+    prod-v1.0:
+      type: duckdb
+      path: dev.duckdb
+      schema: parquet
+      external_root: '\\files.drexel.edu\colleges\SOPH\Shared\UHC\Projects\DBT_Training\_v1.0\prod\'  
+    stage-azure-v1.0:
+      type: az_blob
+      account_name: f
+      account_key:  f
+      container: f
+      blob_path: f
+      endpoint_suffix: f
+      sas_token: f
+  target: prod-v1.0
